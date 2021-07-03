@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Bmw
+    </title>
+    
+    <link rel="stylesheet" href="videopage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style_glass.css" />
+    <link rel="stylesheet" href="style_clock.css">
+    
+  </head>
+  <body onload="initClock()">
+    <header>
+      
+      <a href="#" class="brand"><img src="bmw_logo.jpg" width="50px"></a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="#">Home</a>
+          <a href="#about">About</a>
+          <a href="#">Explore</a>
+          <a href="#">Gallery</a>
+          <a href="#">Contact</a>
+
+        </div>
+      </div>
+     <!--digital clock start-->
+      <div class="clock">
+        <div class="datetime">
+          <div class="date">
+            <span id="dayname">Day</span>,
+            <span id="month">Month</span>
+            <span id="daynum">00</span>,
+            <span id="year">Year</span>
+          </div>
+          <div class="time">
+            <span id="hour">00</span>:
+            <span id="minutes">00</span>:
+            <span id="seconds">00</span>
+            <span id="period">AM</span>
+          </div>
+        </div>
+        <!--digital clock end-->
+    
+        <script type="text/javascript">
+        function updateClock(){
+          var now = new Date();
+          var dname = now.getDay(),
+              mo = now.getMonth(),
+              dnum = now.getDate(),
+              yr = now.getFullYear(),
+              hou = now.getHours(),
+              min = now.getMinutes(),
+              sec = now.getSeconds(),
+              pe = "AM";
+    
+              if(hou >= 12){
+                pe = "PM";
+              }
+              if(hou == 0){
+                hou = 12;
+              }
+              if(hou > 12){
+                hou = hou - 12;
+              }
+    
+              Number.prototype.pad = function(digits){
+                for(var n = this.toString(); n.length < digits; n = 0 + n);
+                return n;
+              }
+    
+              var months = ["January", "February", "March", "April", "May", "June", "July", "Augest", "September", "October", "November", "December"];
+              var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+              var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", "period"];
+              var values = [week[dname], months[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
+              for(var i = 0; i < ids.length; i++)
+              document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+        }
+    
+        function initClock(){
+          updateClock();
+          window.setInterval("updateClock()", 1);
+        }
+        </script>
+
+      </div>
+      <!--digital clock end-->
+    </header>
+
+    <section class="home">
+      <video
+        class="video-slide active"
+        src="BMw drift.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+      <video
+        class="video-slide"
+        src="bmw2.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+      <video
+      class="video-slide active"
+      src="bmw3.mp4"
+      autoplay
+      muted
+      loop
+    ></video>
+    <video
+    class="video-slide active"
+    src="bmw4.mp4"
+    autoplay
+    muted
+    loop
+  ></video>
+      <div class="content active">
+        <h1>Wonderful.<br /><span>Cars</span></h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Feel the<br /><span>Legacy</span></h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Adventures.<br /><span>Off Road</span></h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Road Trip.<br /><span>Together</span></h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <a href="#">Read More</a>
+      </div>
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        
+      </div>
+    </section>
+
+    <script type="text/javascript">
+      //Javacript for responsive navigation menu
+      const menuBtn = document.querySelector(".menu-btn");
+      const navigation = document.querySelector(".navigation");
+
+      menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+      });
+
+      //Javacript for video slider navigation
+      const btns = document.querySelectorAll(".nav-btn");
+      const slides = document.querySelectorAll(".video-slide");
+      const contents = document.querySelectorAll(".content");
+
+      var sliderNav = function (manual) {
+        btns.forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+
+        contents.forEach((content) => {
+          content.classList.remove("active");
+        });
+
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+        contents[manual].classList.add("active");
+      };
+
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          sliderNav(i);
+        });
+      });
+    </script>
+
+    <!-- Start About -->
+    <table
+      border="0"
+      id="about"
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      bgcolor="#161623"
+    >
+      <tr>
+        <td>
+          <table
+            border="0"
+            width="85%"
+            cellpadding="15"
+            cellspacing="0"
+            align="center"
+          >
+            <!-- Heading Start-->
+            <tr>
+              <td height="160" align="center" valign="middle" colspan="2"class="container">
+                <font face="arial" size="6" color=" #000000"> About </font>
+                <hr width="70" color="#f3971b" />
+              </td>
+            </tr>
+            <!-- Heading  End-->
+            <tr>
+              <td width="100%" class="container_2" href="about">
+                <font face="arial" size="10" color="#ffffff" >
+                  History:
+                </font>
+              </td>
+              <td width="65%" valign="top">
+                <table
+                  border="0"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  align="center"
+                >
+                  <tr>
+                    <td height="40">
+                      <font face="arial" size="10" color="#ffffff" class="container">
+                        "MOTOR FUTURE IS HERE"
+                      </font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <font face="arial" size="5" color="#ffffff" class="container">
+                        BMW - Bayerische Motoren Werke
+                      </font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="container">
+                        <font face="arial" size="5" color="#000000" class="card_2">
+                          Bayerische Motoren Werke AG, commonly known as
+                          Bavarian Motor Works, BMW or BMW AG, is a German
+                          automobile, motorcycle and engine manufacturing
+                          company founded in 1916.
+                          In June 2012, BMW was listed as the #1 most reputable
+                          company in the world by Forbes.com. Rankings are based
+                          upon aspects such as “people’s willingness to buy,
+                          recommend, work for, and invest in a company is driven
+                          60% by their perceptions of the company and only 40%
+                          by their perceptions of their products.”
+                        </font>
+                      </p>
+  
+                      <hr noshade />
+                      <br />
+                      <!--button type="button" onclick="ask()">
+                        <a href="book_form.html">
+                          <font face="arial" size="5"> BOOK </font>
+                        </a>
+                      </button>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <button type="button" onclick="ask()">
+                        <a href="Feedback_form.xhtml">
+                          <font face="arial" size="5"> FEEDBACK </font>
+                        </a>
+                      </button-->
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- section padding bottom -->
+            <tr>
+              <td height="60" colspan="2"></td>
+            </tr>
+            <!-- section padding bottom End-->
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <!--glass morphisms starts-->
+    <div class="glass">
+      <div class="container">
+        <div class="card">
+          <div class="content">
+            <h2>01</h2>
+            <h3>Contact With us</h3>
+            <p>
+              Click on the link below to contact us.
+            </p>
+            <a href="php/mail_form.html">READ MORE</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>02</h2>
+            <h3>store your Database(in array form) here</h3>
+            <p>
+              Click on the link below to go on databasse page.
+            </p>
+            <a href="array.html">Login form</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>03</h2>
+            <h3>Registration and Login </h3>
+            <p>
+              Here You can register to our service.
+            </p>
+            <a href="redirect.html">READ MORE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".card"), {
+        max: 25,
+        speed: 400,
+        glare: true,
+        "max-glare": 1,
+      });
+    </script>
+    <!--glass morphism ends-->
+  </body>
+</html>

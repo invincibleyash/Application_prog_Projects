@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input-index</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .bg-img {
+            display: block;
+            position: absolute;
+            margin: 0px;
+            position: relative;
+            width: 100%;
+            filter: brightness(95%);
+        }
+
+        h1 {
+            color: rgb(0, 0, 0);
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            font-size: 3em;
+        }
+
+        .box {
+            width: 30%;
+            height: 250px;
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 10px;
+            position: absolute;
+            left: 90px;
+            top: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: mintcream;
+            background-color: rgb(30, 36, 16);
+            height: 15%;
+        }
+
+        .login-input {
+            padding-left: 20px;
+        }
+
+        input {
+            text-transform: uppercase;
+            width: 80%;
+            height: 25px;
+            font-size: 12px;
+            padding-left: 10px;
+
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        .login{
+            position: absolute;
+            left: 1000px;
+            top: 150px;
+        }
+        .register{
+            position: absolute;
+            left: 1000px;
+            top: 200px;
+        }
+        a {
+            text-decoration: none;
+            text-align: center;
+            
+            border: 1px solid rgb(30, 36, 16);
+            color: mintcream;
+            background-color: rgb(30, 36, 16);
+            width: 10%;
+            /* height: 40px; */
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        a:hover {
+            color: mintcream;
+            background-color: rgb(74, 75, 71);
+        }
+        video{
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+    </style>
+</head>
+
+<body>
+    <video
+    class="video-slide active"
+    src="BMw drift.mp4"
+    autoplay
+    muted
+    loop
+  ></video>
+    <h1 style="font-size: xx-larger;" >HEY welcome you all</h1>
+    <?php
+        if(array_key_exists('button1', $_POST)) {
+            button1();
+        }
+        else if(array_key_exists('button2', $_POST)) {
+            button2();
+        }
+        function button1() {
+            echo "This is Button1 that is selected";
+        }
+        function button2() {
+            echo "This is Button2 that is selected";
+        }
+    ?>
+    <a class="login" href="http://localhost/sin_log/sinup.php">login</a>
+    <a class="register" href="http://localhost/sin_log/register.php">register</a>
+</body>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+body{
+    
+
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 75px;
+    margin-bottom: 40px;
+    background-color: rgba(62, 160, 206, 0.363);
+}
+
+.table tr,th,td {
+    border: 1px solid gainsboro;
+    
+    
+  }
+  .table{
+      width: 100%;
+  }
+  .table tr th, .table tr td{
+    padding: 10px;
+}
+.table tr:first-child{
+    background-color: rgba(62, 160, 206, 0.9);
+    color: 3ff;
+}
+.container{
+    width: 96%;
+    margin-left: 2%;
+    padding:10px; 
+}
+.box
+{ width: 50%;
+    margin-left: 20px;
+    padding: 20px;
+    border-color: lavender;
+    border-radius:20px ;
+
+
+}
+.group label{
+    display: block;
+    padding-left: 1px;
+}
+.group input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgb(207, 213, 231);
+
+}
+.group{
+    margin-bottom:20px ;
+    border:none;
+    background-color: rgba(35, 146, 91, 0.596);
+    color: wheat;
+}
